@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Yashvi 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --pink: #ff5f9e;
+            --rose: #ff9a9e;
+            --peach: #fad0c4;
+            --glow: #fff0f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top, var(--rose), var(--peach));
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* SECTIONS */
+        section {
+            min-height: 100vh;
+            padding: 100px 10vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* HERO */
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5rem);
+            line-height: 1.05;
+        }
+
+        .hero h1 span {
+            display: inline-block;
+            animation: wobble 2s infinite;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin-top: 25px;
+            font-size: 1.35rem;
+            opacity: 0;
+            animation: fadeUp 1.6s forwards .6s;
+        }
+
+        .scroll {
+            margin-top: 40px;
+            font-size: .9rem;
+            opacity: .7;
+            animation: floatText 2s infinite;
+        }
+
+        /* FLOATING EVERYTHING */
+        .float {
+            position: fixed;
+            bottom: -30px;
+            pointer-events: none;
+            animation: floatUp linear forwards;
+            z-index: 0;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            border-radius: 30px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(14px);
+            transform: scale(.7) rotate(-6deg);
+            opacity: 0;
+        }
+
+        .card img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            transition: .7s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.15) rotate(4deg);
+        }
+
+        /* LOVE TEXT */
+        .love {
+            font-size: 1.4rem;
+            line-height: 2;
+            animation: glow 3s infinite;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 50px;
+            padding: 18px 46px;
+            border-radius: 60px;
+            border: none;
+            background: white;
+            color: var(--pink);
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: .3s;
+            box-shadow: 0 0 0 rgba(255, 255, 255, .8);
+        }
+
+        .btn:hover {
+            transform: scale(1.15) rotate(-1deg);
+            box-shadow: 0 0 60px rgba(255, 255, 255, 1);
+        }
+
+        /* NAME POPUPS */
+        .name-pop {
+            position: fixed;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 0 20px var(--glow);
+            animation: namePop 2.5s ease forwards;
+            pointer-events: none;
+        }
+
+        /* PARTICLES */
+        .spark {
+            position: fixed;
+            pointer-events: none;
+            animation: spark 1.5s ease forwards;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 60px 10vw;
+            opacity: .6;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes wobble {
+
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+
+            25% {
+                transform: rotate(3deg)
+            }
+
+            75% {
+                transform: rotate(-3deg)
+            }
+        }
+
+        @keyframes floatText {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(12px)
+            }
+        }
+
+        @keyframes floatUp {
+            to {
+                transform: translateY(-130vh) rotate(360deg);
+                opacity: 0
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 12px rgba(255, 255, 255, .4)
+            }
+
+            50% {
+                text-shadow: 0 0 35px rgba(255, 255, 255, 1)
+            }
+        }
+
+        @keyframes namePop {
+            from {
+                opacity: 1;
+                transform: scale(.3)
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(1.6) translateY(-120px)
+            }
+        }
+
+        @keyframes spark {
+            to {
+                transform: translate(var(--x), var(--y)) scale(0);
+                opacity: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>
+            Happy Birthday
+            <span>Y</span><span>a</span><span>s</span><span>h</span><span>v</span><span>i</span> 💖🎂
+        </h1>
+        <p>
+            Yashvi, today the universe paused just to celebrate you.
+            Your smile, your chaos, your softness, your magic.
+            Existing at the same time as you already feels like a win 🫶
+        </p>
+        <div class="scroll">scroll for emotional damage ⬇️</div>
+    </section>
+
+    <section>
+        <h1>Yashvi Through My Eyes ✨</h1>
+        <div class="gallery">
+            <div class="card"><img src="Energy.jpg"></div>
+            <div class="card"><img src="Princess.jpg"></div>
+            <div class="card"><img src="maal.jpg"></div>
+            <div class="card"><img src="sukoon.jpg"></div>
+            <div class="card"><img src="meow.jpg"></div>
+            <div class="card"><img src="Cutiepie.jpg"></div>
+        </div>
+    </section>
+
+    <section>
+        <h1>For Yashvi 💌</h1>
+        <p class="love">
+            Yashvi, you make ordinary days softer 💗
+            You make silence comforting 🌸
+            You make chaos beautiful ✨
+            And today, Yashvi, the world celebrates you 🎉
+        </p>
+
+        <button class="btn" onclick="ultimateChaos()">PRESS FOR MAX LOVE 💥</button>
+    </section>
+
+    <footer>
+        built exclusively to make Yashvi smile 💖
+    </footer>
+
+    <script>
+        /* SCROLL REVEAL */
+        const cards = document.querySelectorAll('.card');
+        const obs = new IntersectionObserver(e => {
+            e.forEach(x => {
+                if (x.isIntersecting) {
+                    x.target.style.transition = 'all .9s ease';
+                    x.target.style.opacity = 1;
+                    x.target.style.transform = 'scale(1) rotate(0)';
+                    obs.unobserve(x.target);
+                }
+            });
+        }, { threshold: .2 });
+        cards.forEach(c => obs.observe(c));
+
+        /* FLOATING EMOJIS */
+        const emojis = ["💖", "🎂", "✨", "🎉", "🫶", "🌸", "🥰", "💫"];
+        setInterval(() => {
+            const f = document.createElement('div');
+            f.className = 'float';
+            f.textContent = emojis[Math.random() * emojis.length | 0];
+            f.style.left = Math.random() * 100 + 'vw';
+            f.style.fontSize = 20 + Math.random() * 30 + 'px';
+            f.style.animationDuration = 4 + Math.random() * 4 + 's';
+            document.body.appendChild(f);
+            setTimeout(() => f.remove(), 8000);
+        }, 350);
+
+        /* CLICK SPARKLES + NAME */
+        document.addEventListener('click', e => {
+            for (let i = 0; i < 10; i++) {
+                const s = document.createElement('div');
+                s.className = 'spark';
+                s.textContent = '✨';
+                s.style.left = e.clientX + 'px';
+                s.style.top = e.clientY + 'px';
+                s.style.setProperty('--x', (Math.random() * 160 - 80) + 'px');
+                s.style.setProperty('--y', (Math.random() * 160 - 80) + 'px');
+                document.body.appendChild(s);
+                setTimeout(() => s.remove(), 1500);
+            }
+
+            const n = document.createElement('div');
+            n.className = 'name-pop';
+            n.textContent = 'Yashvi 💖';
+            n.style.left = e.clientX + 'px';
+            n.style.top = e.clientY + 'px';
+            document.body.appendChild(n);
+            setTimeout(() => n.remove(), 2500);
+        });
+
+        /* BUTTON APOCALYPSE */
+        function ultimateChaos() {
+            for (let i = 0; i < 120; i++) {
+                const f = document.createElement('div');
+                f.className = 'float';
+                f.textContent = emojis[Math.random() * emojis.length | 0];
+                f.style.left = Math.random() * 100 + 'vw';
+                f.style.fontSize = 22 + Math.random() * 35 + 'px';
+                f.style.animationDuration = 2 + Math.random() * 3 + 's';
+                document.body.appendChild(f);
+                setTimeout(() => f.remove(), 6000);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
